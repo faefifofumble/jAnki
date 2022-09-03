@@ -11,6 +11,7 @@ module.exports = {
             console.log(err)
         }
     },
+
     createTodo: async (req, res)=>{
         try{
             await Todo.create({cardFront: req.body.cardFront, cardBack: req.body.cardBack, completed: false, userId: req.user.id})
